@@ -1,0 +1,19 @@
+{
+  "name": "feeling_feelings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"echo\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyNameIsJohnson/feeling_feelings.git"
+  },
+  "author": "Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyNameIsJohnson/feeling_feelings/issues"
+  },
+  "homepage": "https://github.com/MyNameIsJohnson/feeling_feelings#readme"
+}
