@@ -29,7 +29,7 @@ function getMeditationTemplate(meditation) {
     return `
       <article id="${post._id}" class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">${post.user}</h5>
+          <h5 class="card-title">${user.firstName}</h5>
           <p class="card-text">${post.body}</p>
           <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
         </div>

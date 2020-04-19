@@ -29,13 +29,19 @@ const meditations = [
   },
   {
 
-    name: 'Breathing Techniques',
+    name: 'Breathing-Techniques',
     description: 'Four of the most impact life changing breathing styles!',
     image: 'https://thumbs.dreamstime.com/b/yoga-body-pose-silhouette-over-moon-night-sly-mindfulness-meditation-exercise-prayer-position-yoga-body-pose-silhouette-over-113141516.jpg'
   },
   {
 
-    name: 'Deep Relaxation',
+    name: 'Energizing',
+    description: 'Meditation For Energy: To Naturally Energize Your Body And Mind',
+    image: 'https://images.unsplash.com/photo-1557652941-43892b86cd93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+  },
+  {
+
+    name: 'Deep-Relaxation',
     description: 'Meditations that help you body fall into deep relaxation',
     image: 'https://i.ytimg.com/vi/jeGT1VXwfx4/maxresdefault.jpg'
   },

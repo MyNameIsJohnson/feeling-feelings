@@ -1,5 +1,6 @@
 console.log('Index meditation ...');
-const meditationElement = document.getElementById('meditation');
+const meditationUL = document.getElementById('meditationUL');
+const meditationTab = document.getElementById('meditationTab');
 
 fetch('/api/v1/meditations')
   .then((buffer) => buffer.json())
@@ -14,25 +15,35 @@ function render(meditationsArr) {
   const meditationTemplates = meditationsArr.map((meditation) => {
     return getMeditationTemplate(meditation);
   }).join('');
+  const meditationTabs = meditationsArr.map((meditation) => {
+    return getMeditationTabs(meditation);
+  }).join('');    
 
-  meditationElement.insertAdjacentHTML('beforeend', meditationTemplates);
+  meditationUL.insertAdjacentHTML('beforeend', meditationTemplates);
+  
+  meditationTab.insertAdjacentHTML('beforeend', meditationTabs);
+  
 }
-
 
 function getMeditationTemplate(meditation) {
   return `
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="${meditation.image}" class="card-img-top" alt="${meditation.name}" />
+      <li class="nav-item"><a data-toggle="tab" href="#${meditation.name}" class="btn tab ">${meditation.name}
+      </a>
+  `;   
+}
+function getMeditationTabs(meditation) {
+  return `
+      <div id="${meditation.name}" class="tab-pane fade ">
         <div class="card-body">
-          <h5 class="card-title">${meditation.name}</h5>
-          <p class="card-text">
-            ${meditation.description}
-            (${meditation.posts.length} ${meditation.posts.length === 1 ? 'post' : 'posts'})
-          </p>
-          <a href="/meditations/${meditation._id}" class="btn btn-primary float-right">View Details</a>
+          <h2 class="meditation-name">${meditation.name}</h2>
         </div>
+        <img src="${meditation.image}" class="card-img-top" alt="${meditation.name}" />
       </div>
-    </div>
   `;
 }
+
+meditationUL.addEventListener('click', (event) => {
+  event.preventDefault();
+  let meditationWelcome = document.getElementById('meditation-welcome');
+  meditationWelcome.parentNode.removeChild(meditationWelcome) 
+});

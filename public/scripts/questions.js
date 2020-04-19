@@ -39,7 +39,7 @@ function submitFeeling(){
   $(par).append(myReply);
   $('.nameSubmit').remove();  
   $('#greeting').before(par);
-  $('.userFeeling').addClass('hidden');
+  $('.userFeeling').remove('.userFeeling');
   $('.sendFeelingBtn').remove('.sendFeelingBtn');
   $('.userQuestion1').removeClass('hidden');
   $('.sendQuestion1Btn').removeClass('hidden');
@@ -56,7 +56,7 @@ function feeling(){
   let par = $('<h3 class="question">');     
   for (let i = 0, j = 0, k = 0; i < anger.length, j < fear.length, k < happy.length; i++, j++, k++){
     if (userFeeling === anger[i]){
-      let reply = `You don't need to allow yourself to fee that way. Anger is a secondary emotion that can become a very negative emotion. Try to reflect on the underlying cause of that feeling of ${userFeeling}. What works best for me is taking deep in breaths. And long slow out breaths. Meditation helps me too. Signup and connect with others that practice anger management through meditation.`;
+      let reply = `You don't need to allow yourself to feel that way. Anger is a secondary emotion that can become a very negative emotion. Try to reflect on the underlying cause of that feeling of ${userFeeling}. What works best for me is taking deep in breaths. And long slow out breaths. Meditation helps me too. Signup and connect with others that practice anger management through meditation.`;
       $(par).append(reply);
       $('.feelingSubmit').remove();
       $('#greeting').before(par);
@@ -79,11 +79,14 @@ function feeling(){
       $('.userQuestion1').remove('.userQuestion1');
       $('.sendQuestion1Btn').remove('.sendQuestion1Btn'); 
     }
+    else{
+      return "Sorry, we don't have any advice for the feeling that you have provided. Please try describing your feeling using another word."
+    }
   }
 };
 $('.userName').on('click', function (e){
   $('.main-card').removeClass('col-md-4')
-  $('.main-card').addClass('questions');  
+  $('.main-card').addClass('questions container');  
   
 })
 $('.sendBtn').on('click', function (e){
@@ -117,5 +120,21 @@ $('.sendQuestion1Btn').on('click', function (e){
 });
 
 
-
-
+$( ".userName" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+    event.preventDefault();
+    return submitName();
+  }
+});
+$( ".userFeeling" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+    event.preventDefault();
+    return submitFeeling();
+  }
+});
+$( ".userQuestion1" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+    event.preventDefault();
+    return feeling();
+  }
+});

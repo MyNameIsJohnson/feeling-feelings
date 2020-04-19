@@ -1,6 +1,5 @@
 const db = require('../models');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 
 const register = (req, res) => {
   db.User.findOne({email: req.body.email}, (err, foundUser) => {
@@ -70,6 +69,7 @@ const login = (req, res) => {
           lastName: foundUser.lastName,
           email: foundUser.email,
         }
+        console.log(currentUser);
 
         req.session.currentUser = currentUser;
         return res.status(200).json({
@@ -108,11 +108,11 @@ const logout = (req, res) => {
 
 const verify = (req, res) => {
 
-  if (req.session.user) {
+  if (req.session.currentUser) {
     return res.json({
       status: 200,
       message: 'Authorized',
-      user: req.session.user
+      user: req.session.currentUser
     });
   }
 
