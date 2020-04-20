@@ -4,11 +4,11 @@ Users can explore the benefits of meditation with this site. They will have the 
 <h2> Technologies Used </h2>
 HTML, CSS, Javascript, Node.js, Express, Mongodb, jQuery, Bootstrap
 
-![wireframe]()
+![wireframe](https://github.com/MyNameIsJohnson/feeling-feelings-back-end/blob/heroku-test/Screen%20Shot%202020-04-20%20at%209.35.49%20AM.png)
 
 
 
-[I'm an inline-style link with title](http://localhost:4000/nonUser)
+[feeling feelins](http://localhost:4000/nonUser)
 
 
 
