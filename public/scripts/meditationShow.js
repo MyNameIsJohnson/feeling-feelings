@@ -27,9 +27,9 @@ function getMeditationTemplate(meditation) {
   // meditation Posts Template
   const meditationPosts = meditation.posts.map((post) => {
     return `
-      <article id="${post._id}" class="card mb-4">
+      <article id="${post._id}" class="card postBody">
         <div class="card-body">
-          <h5 class="card-title">${post.user}</h5>
+          <h5 class="card-title">${post.title}</h5>
           <p class="card-text">${post.body}</p>
           <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
         </div>
@@ -40,16 +40,21 @@ function getMeditationTemplate(meditation) {
   // meditation Template
   return `
     <div id="${meditation._id}" class="col-md-8 offset-md-2">
-      <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
-        Add Post
-      </button>
-      <img src="${meditation.image}" class="img-fluid" width="100%" />
-      <h2>${meditation.name}</h2>
-      <p class="mb-5">${meditation.description}</p>
-      <section>
-      <h4 class="mb-4">Posts:</h4>
-        ${meditationPosts}
-      </section>
+    <img src="${meditation.image}" class="img-fluid" width="100%" />
+    <h2>${meditation.name}</h2>
+    <p class="mb-5">${meditation.description}</p>
+      <div class="row">
+        <div class="col-md-4 postBtn">
+          <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
+            Add Post
+          </button>
+        </div>
+        
+        <div class="col-md-8 postBody">
+          <h4 class="mb-4">Posts:</h4>
+            ${meditationPosts}
+        </div>
+      </div>
     </div>
   `;
 }

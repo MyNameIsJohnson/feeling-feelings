@@ -1,58 +1,118 @@
 body{
- background-image: url("https://images.unsplash.com/photo-1514351630998-ad9175c7791d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); 
- background-repeat: no-repeat;
- background-size: cover;
- font-family: fantasy;
-}
-.jumbotron{
-  background-color: transparent;
-}
-.bg-dark {
-  background-color: #ffc48e!important;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-}
-.display-4 {
-  font-family: fantasy;
-  color: #00000070
-}
-.lead{
-  font-family: fantasy;
-  color: #00000070
-}
-img{
-  height: 300px;
-}
-.card{
-  height: 450px;
-}
-.main-card, .card-text{
-  text-align: center;
-}     
-.main-card:hover{
-  background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1514351630998-ad9175c7791d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); 
   background-repeat: no-repeat;
-  border-radius: 10px;
-  border: 5px solid #ffc48e;
-}
-.questions{
   background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1514351630998-ad9175c7791d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  border: 5px solid #ffc48e;
-  z-index: 1;
-  height: 450px;
-  position: absolute;
+  font-family: fantasy;
+  text-align: center;
+ 
+ }
+ .jumbotron{
+   background-color: transparent;
+ }
+ .bg-dark {
+   background-color: #ffc48e!important;
+ }
+ main{
+   overflow: auto;
+   margin-bottom: 100px;
+ }
+ .navbar-dark .navbar-nav .nav-link {
+   color: #ffffff;
 }
-.hidden{
-  visibility: hidden;
-}       
-.btn{
+
+.display-4 {
+   font-family: fantasy;
+   color: #00000070
+ }
+ .lead{
+   font-family: fantasy;
+   color: #00000070
+ }
+ img{
+   height: 300px;
+ }
+ .card{
+   height: 450px;
+   color: black;
+ }
+ .main-card, .card-text{
+   text-align: center;
+ }     
+ .main-card:hover{
+   background-size: cover;
+   background-image: url("https://images.unsplash.com/photo-1514351630998-ad9175c7791d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); 
+   background-repeat: no-repeat;
+   border-radius: 10px;
+   border: 5px solid #ffc48e;
+ }
+ .card-text{
+   display: grid;
+ }
+ input{
+   text-align: center;
+   border: solid 2px #00bcd4
+ }
+ .questions{
+   background-size: cover;
+   background-image: url("https://images.unsplash.com/photo-1514351630998-ad9175c7791d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+   background-repeat: no-repeat;
+   border-radius: 10px;
+   border: 5px solid #ffc48e;
+   z-index: 1;
+   height: 450px;
+   position: absolute;
+ }
+ h3{
+  line-height: 2;
+ }
+ .hidden{
+   visibility: hidden;
+ }       
+
+ .subBtn:hover{
+   background-color:#ff8d40;
+   margin-top: 10px;
+   color: white  !important;
+ }
+ 
+ .offset-md-3 {
+   margin-top: 90px;
+ }
+
+ #meditationUL {
+ }
+.grid {
+  margin: 0 auto 20px auto;
+}
+ .tab, .subBtn{
+  background-color: #ffb873;
+  margin: 10px 10px;
   border: solid 2px white;
+  border-radius: 10px;
 }
-.offset-md-2{
-  /* color: white; */
+ .tab:hover{
+   background-color: #ff8d40;
+   color: white;
+ }
+ .meditation-name{
+   color: #186d79cc;
+ }
+ @media screen and (max-width: 600px) {
+  .meditation-name {
+    color: white;
+  }
 }
+ .idx-img{
+   height: 100%;
+   width: 100%;
+ }
+ 
+ /* Post page */
+ .postBtn{
+   display: grid;
+   height: 100px;
+ }
+ 
+ .postBody{
+   height: 300px;
+ }

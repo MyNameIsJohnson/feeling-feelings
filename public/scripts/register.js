@@ -46,7 +46,7 @@ function handleSignupSubmit(event) {
       body: JSON.stringify(userData),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then((data) => { 
         console.log(data);
         window.location = '/login';
       })

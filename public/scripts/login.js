@@ -50,10 +50,13 @@ function handleLoginSubmit(event) {
       .then((res) => res.json())
       .then((data) => {
         if (data.status === 200) {
-          localStorage.setItem('currentUser', JSON.stringify(data.currentUser));          
+          console.log(data.user);
+          localStorage.setItem('currentUser', JSON.stringify(data.user));    
           window.location = '/profile';
+        } 
+        else {
+          alert('Username or password is incorrect');
         }
-        console.log(data);
       })
       .catch((err) => console.log(err));
   }
