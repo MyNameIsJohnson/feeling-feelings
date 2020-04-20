@@ -53,8 +53,10 @@ function handleLoginSubmit(event) {
           console.log(data.user);
           localStorage.setItem('currentUser', JSON.stringify(data.user));    
           window.location = '/profile';
+        } 
+        else {
+          alert('Username or password is incorrect');
         }
-        console.log(data);
       })
       .catch((err) => console.log(err));
   }

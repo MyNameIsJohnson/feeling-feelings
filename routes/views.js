@@ -1,18 +1,35 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/nonUser', (req, res) => {
+  res.sendFile('views/index.html', {
+    root: __dirname + '/../'
+  });
+});
 router.get('/', (req, res) => {
   res.sendFile('views/index.html', {
     root: __dirname + '/../'
   });
 });
 
-
-router.get('/meditations', (req, res) => {
-  res.sendFile('views/meditation/meditation.html', {
+router.get('/nonUserMeditation', (req, res) => {
+  res.sendFile('views/meditation/nonUserMeditation.html', {
     root: __dirname + '/../',
   });
 });
+
+router.get('/loggedin', (req, res) => {
+  res.sendFile('views/meditation/userIndex.html', {
+    root: __dirname + '/../',
+  });
+});
+
+router.get('/meditations', (req, res) => {
+  res.sendFile('views/meditation/userMeditation.html', {
+    root: __dirname + '/../',
+  });
+});
+
 router.get('/meditations/:id', (req, res) => {
   res.sendFile('views/meditation/meditationShow.html', {
     root: __dirname + '/../'

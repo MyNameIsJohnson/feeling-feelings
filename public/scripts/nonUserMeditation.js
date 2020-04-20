@@ -37,7 +37,8 @@ function getMeditationTabs(meditation) {
         <div class="card-body">
           <h2 class="meditation-name">${meditation.name}</h2>
         </div>
-        <img src="${meditation.image}" class="card-img-top" alt="${meditation.name}" />
+        <img src="${meditation.image}" class="card-img-top idx-img" alt="${meditation.name}" />
+          <h4> <a href="/register" >Signup</a> to start your journey</h4>
       </div>
   `;
 }
@@ -46,4 +47,5 @@ meditationUL.addEventListener('click', (event) => {
   event.preventDefault();
   let meditationWelcome = document.getElementById('meditation-welcome');
   meditationWelcome.parentNode.removeChild(meditationWelcome) 
-});
+}, {once : true});
+
