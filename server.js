@@ -8,17 +8,17 @@ const MongoStore = require('connect-mongo')(session);
 
 // require('dotenv').config()
 
-const PORT = process.env.PORT || 4000;
+mongoose.connect( process.env.MONGODB_URI || "localhost:27017/feeling_feelings";
 
 const routes = require('./routes');
 
 const db = require('./models');
 
 const corsOptions = {
-  origin: ['http://localhost:3000'],
+  origin: [process.env.FRONTEND_URL], // allows the env variable to define allowable origin URLs
   methods: "GET,POST,PUT,DELETE",
-  credentials: true, 
-  optionsSuccessStatus: 200 
+  credentials: true, //allows session cookies to be sent back and forth
+  optionsSuccessStatus: 200 //legacy browsers
 }
 
 app.use(express.static(__dirname + '/public'));
@@ -62,4 +62,4 @@ app.use('*', (req, res) => {
   res.send('<h2>Error 404: Not Found</h2>');
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}.`));
+app.listen(process.env.PORT || 3000)
