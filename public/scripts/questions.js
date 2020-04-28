@@ -31,7 +31,7 @@ function submitName(){
 let userFeeling = "";
 
 function submitFeeling(){
-  userFeeling = $('.userFeeling').val();
+      userFeeling = $('.userFeeling').val();
       userFeeling = userFeeling.toLowerCase();
       myReply = `So you are feeling ${userFeeling} today, huh? <br/> What's been happening that's making you feel ${userFeeling}?`;  
       let par = $('<h3 class="feelingSubmit">');
@@ -54,9 +54,9 @@ let appendResults = function(){
   $('.sendQuestion1Btn').remove('.sendQuestion1Btn');
 };
 
-function feeling(){
-  letuserFeeling = $('.userFeeling').val();
-  
+function feeling(userFeeling){
+  userFeeling = $('.userFeeling').val();
+  console.log(userFeeling)
   for (let i = 0; i < anger.length, i < happy.length, i < sad.length, i < fear.length; i++){
     
     if (userFeeling === anger[i]){
@@ -83,11 +83,11 @@ function feeling(){
       $(par).append(fearReply);
       return appendResults();
       
-    }else {
+    }else if(userFeeling !== anger[i] || userFeeling !== fear[i] || userFeeling !== happy[i] || userFeeling !== sad[i]){
       let sorryReply = `Sorry, we don't have understand what ${userFeeling} means and cannot provide and advice.  Please try describing your feeling using another word. Or browse our site for helpful tips to cope with this ${userFeeling}`;
       $(par).append(sorryReply);
       return appendResults();
-    } 
+    }
   }
 };
 $('.userName').on('click', function (e){

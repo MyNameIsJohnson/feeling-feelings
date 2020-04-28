@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo')(session);
 
 // require('dotenv').config()
 
-mongoose.connect( process.env.MONGODB_URI || "localhost:27017/feeling_feelings";
+const PORT = process.env.PORT || 4000;
 
 const routes = require('./routes');
 
@@ -62,4 +62,4 @@ app.use('*', (req, res) => {
   res.send('<h2>Error 404: Not Found</h2>');
 });
 
-app.listen(process.env.PORT || 3000)
+app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

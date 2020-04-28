@@ -43,6 +43,7 @@ function getMeditationTemplate(meditation) {
     <img src="${meditation.image}" class="img-fluid" width="100%" />
     <h2>${meditation.name}</h2>
     <p class="mb-5">${meditation.description}</p>
+    ${meditation.detail}
       <div class="row">
         <div class="col-md-4 postBtn">
           <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">

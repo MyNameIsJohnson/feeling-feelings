@@ -25,6 +25,9 @@ const meditations = [
   {
     name: 'Mindfulness',
     description: 'Taking the path of greater awareness can lighten your life',
+    detail: `<div class="video-container youtube">
+    <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/D026-7BBqYw?showinfo=0&amp;rel=0&amp;wmode=opaque&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.niroga.org" data-gtm-yt-inspected-11876756_13="true" id="63082149" data-gtm-yt-inspected-11876756_14="true" data-gtm-yt-inspected-11876756_15="true" data-gtm-yt-inspected-11876756_18="true"></iframe>
+    </div>`,
     image: 'https://tricycle.org/wp-content/uploads/2018/03/meditation-chogyam-trungpa.jpg '
   },
   {
@@ -49,6 +52,9 @@ const meditations = [
 
     name: 'Destressing',
     description: 'Life is stressful, we all know. Meditation has the capabilities of removing the stress out of your life',
+    detail: `<div class="video-container youtube">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W19PdslW7iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>`,
     image: 'https://media.npr.org/assets/img/2014/01/07/mindfulness_wide-b20c3525971d5796eba9ad993463fffe8faf2bcb-s800-c85.jpg'
   },
 ];

@@ -4,7 +4,8 @@ const Post = require('./Post');
 const MeditationSchema = new mongoose.Schema({
   name: String,
   description: String,
-  image: String,
+  detail: String,
+  image: String, 
   posts: [Post.schema],
 });
 
