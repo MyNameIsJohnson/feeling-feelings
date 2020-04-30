@@ -90,6 +90,7 @@ function feeling(userFeeling){
     }
   }
 };
+
 $('.userName').on('click', function (e){
   $('.main-card').removeClass('col-md-4')
   $('.main-card').addClass('questions container');  

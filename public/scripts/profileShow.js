@@ -14,10 +14,12 @@ fetch('/api/v1/verify')
             currentUser = data.currentUser;
         };
 		console.log(currentUser);
-		render(data);
+		render(currentUser);
 })
 	.catch((err) => console.log(err));
 
+const welcomeUser = document.createTextNode(`Welcome, ${currentUser.firstName}`);
+welcome.appendChild(welcomeUser);
 const logout = () => {
     fetch('/api/v1/logout', {
         method: 'DELETE',
@@ -119,7 +121,6 @@ $('#modalClose').on('click', function() {
     window.location='/';
 });
 
-const welcomeUser = document.createTextNode(`Welcome, ${currentUser.firstName}`);
-welcome.appendChild(welcomeUser);
+
 
 

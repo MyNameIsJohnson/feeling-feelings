@@ -42,14 +42,19 @@ function handleSignupSubmit(event) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      },
+      },    
+        status: 400,
+        message: 'Email has already been registered, please try again',
+    
       body: JSON.stringify(userData),
+      
     })
       .then((res) => res.json())
       .then((data) => { 
+        window.location = '/login'; 
         console.log(data);
-        window.location = '/login';
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert('Email has already been registered, please Signup with a different email or login'));
+      window.location = '/register'; 
   }
 }

@@ -9,7 +9,7 @@ const register = (req, res) => {
     });
     if (foundUser) return res.status(400).json({
       status: 400,
-      message: 'Email has already been registered, please try again'
+      message: 'Email has already been registered, please try again on authCon'
     });
     bcrypt.genSalt(10, (err, salt)=> {
       if (err) return res.status(400).json({
